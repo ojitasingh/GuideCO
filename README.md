@@ -17,8 +17,6 @@ Code Guide is a lightweight, responsive, and interactive web-based AI assistant 
 
 > *“Hi! I'm Code Guide, your AI programming assistant. How can I help you with your code today?”*
 
-![screenshot](https://via.placeholder.com/600x400?text=Code+Guide+AI+Assistant+UI)
-
 ## 🔧 Setup Instructions
 
 1. **Clone this repository**
