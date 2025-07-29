@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Guide - AI Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col">
+
+  <!-- Chat UI -->
+  <header class="bg-gray-900 p-3 text-white sticky top-0 z-10">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-7 h-7 bg-white rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <h1 class="font-bold text-sm">Code Guide</h1>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button id="analyze-btn" class="p-1 rounded-full hover:bg-gray-700 transition" title="Analyze current page code">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button id="clear-btn" class="p-1 rounded-full hover:bg-gray-700 transition" title="Clear chat">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button id="settings-btn" class="p-1 rounded-full hover:bg-gray-700 transition" title="Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942-.734-4.186.287-.277.227-.453.54-.453.872v.001c0 .272.109.531.306.728.235.235.553.37.888.37.34 0 .65-.14.886-.36.474-.442 1.223-.442 1.697 0 .236.22.546.36.886.36.334 0 .652-.135.888-.37.196-.197.305-.456.305-.728v-.001c0-.332-.176-.645-.453-.872-1.244-1.021-2.814-1.123-4.186-.287a1.532 1.532 0 01-2.286-.948c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948C.844 2.327-.726 2.43-1.97 3.45c-.277.228-.453.54-.453.873v.001c0 .271.109.53.305.727.236.236.553.37.888.37.34 0 .65-.139.886-.36.474-.441 1.223-.441 1.697 0 .236.221.546.36.886.36.335 0 .652-.134.888-.37.196-.196.305-.456.305-.727v-.001c0-.332-.176-.645-.453-.873C-.726 2.43.844 2.327 2.188 3.12a1.532 1.532 0 01-2.286-.948z" clip-rule="evenodd" />
